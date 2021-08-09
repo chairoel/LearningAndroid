@@ -1,0 +1,50 @@
+ext {
+
+    kotlin_version = "1.5.0"
+
+    def coreKtxVersion = '1.3.1'
+    def appcompatVersion = '1.3.1'
+    def materialComponentsVersion = '1.4.0'
+    def constraintLayoutVersion = '2.1.0'
+    def recyclerViewVersion = '1.2.1'
+    def roomVersion = "2.3.0"
+    def mpAndroidChartVersion = 'v3.1.0'
+    def lifecycleVersion = "2.4.0-alpha03"
+
+    def daggerVersion = '2.38.1'
+
+    def junitVersion = '4.13.2'
+    def junitAndroidVersion = '1.1.3'
+    def espressoVersion = '3.4.0'
+    def liveDataTestVersion = "2.1.0"
+
+    generalDependencies = [
+            kotlin            : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            coreKtx           : "androidx.core:core-ktx:$coreKtxVersion",
+            appcompat         : "androidx.appcompat:appcompat:$appcompatVersion",
+            materialComponents: "com.google.android.material:material:$materialComponentsVersion",
+            constraintLayout  : "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion",
+            recyclerView      : "androidx.recyclerview:recyclerview:$recyclerViewVersion",
+            room              : "androidx.room:room-runtime:$roomVersion",
+            roomCoroutines    : "androidx.room:room-ktx:$roomVersion",
+            mpAndroidChart    : "com.github.PhilJay:MPAndroidChart:$mpAndroidChartVersion",
+            viewModel         : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion",
+            liveData          : "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    ]
+
+    dependencyInjection = [
+            dagger: "com.google.dagger:dagger-android:$daggerVersion"
+    ]
+
+    annotations = [
+            room  : "androidx.room:room-compiler:$roomVersion",
+            dagger: "com.google.dagger:dagger-android-processor:$daggerVersion"
+    ]
+
+    testDependencies = [
+            junit       : "junit:junit:$junitVersion",
+            junitAndroid: "androidx.test.ext:junit:$junitAndroidVersion",
+            espresso    : "androidx.test.espresso:espresso-core:$espressoVersion",
+            liveData: "androidx.arch.core:core-testing:$liveDataTestVersion"
+    ]
+}
